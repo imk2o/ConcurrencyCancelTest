@@ -13,6 +13,8 @@
 		B134515A281BA77B00EF33A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1345158281BA77B00EF33A9 /* Main.storyboard */; };
 		B134515C281BA77C00EF33A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B134515B281BA77C00EF33A9 /* Assets.xcassets */; };
 		B134515F281BA77C00EF33A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B134515D281BA77C00EF33A9 /* LaunchScreen.storyboard */; };
+		B1345167281BA7C800EF33A9 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1345166281BA7C800EF33A9 /* ModalViewController.swift */; };
+		B1345169281BA82200EF33A9 /* EchoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1345168281BA82200EF33A9 /* EchoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B134515B281BA77C00EF33A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B134515E281BA77C00EF33A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1345160281BA77C00EF33A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1345166281BA7C800EF33A9 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		B1345168281BA82200EF33A9 /* EchoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				B134515B281BA77C00EF33A9 /* Assets.xcassets */,
 				B134515D281BA77C00EF33A9 /* LaunchScreen.storyboard */,
 				B1345160281BA77C00EF33A9 /* Info.plist */,
+				B1345166281BA7C800EF33A9 /* ModalViewController.swift */,
+				B1345168281BA82200EF33A9 /* EchoService.swift */,
 			);
 			path = ConcurrencyCancelTest;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1345169281BA82200EF33A9 /* EchoService.swift in Sources */,
+				B1345167281BA7C800EF33A9 /* ModalViewController.swift in Sources */,
 				B1345157281BA77B00EF33A9 /* ViewController.swift in Sources */,
 				B1345153281BA77B00EF33A9 /* AppDelegate.swift in Sources */,
 				B1345155281BA77B00EF33A9 /* SceneDelegate.swift in Sources */,
