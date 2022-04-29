@@ -48,7 +48,7 @@ class ModalViewController: UIViewController {
 @MainActor
 final class ModalPresenter {
 
-    private var tasks: [Task<Void, Never>] = []
+    private var task: Task<Void, Never>?
     
     @Published private(set) var echoBack: String? {
         didSet { print("echoBack: \(echoBack ?? "nil")")}
@@ -56,11 +56,11 @@ final class ModalPresenter {
     
     deinit {
         print("deinit presenter")
-        tasks.forEach { $0.cancel() }
+        task?.cancel()
     }
 
     func echo(_ string: String) {
-        tasks.append(Task { [unowned self] in
+        task = Task { [unowned self] in
             do {
                 // 以下の書き方だと、[unowned self]でもキャプチャされてしまう？
                 // echoBack = try await EchoService.shared.echo(string)
@@ -74,11 +74,11 @@ final class ModalPresenter {
                 }
                 dump(error)
             }
-        })
+        }
     }
     
     func echoCancellable(_ string: String) {
-        tasks.append(Task { [unowned self] in
+        task = Task { [unowned self] in
             do {
                 // 以下の書き方だと、[unowned self]でもキャプチャされてしまう？
                 // echoBack = try await EchoService.shared.echoCancellable(string)
@@ -92,6 +92,6 @@ final class ModalPresenter {
                 }
                 dump(error)
             }
-        })
+        }
     }
 }
